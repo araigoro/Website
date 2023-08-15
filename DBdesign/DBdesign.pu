@@ -31,7 +31,7 @@
      * user_id  : int   : ユーザーID(質問者)    :   <FK>
      * title    :   varchar(30) :   題名    :   <N><U>
      * content    :   text :   質問内容    :   <N>
-     * best_answer_id    :   int :   ベストアンサーに選んだ回答ID    :
+     * best_answer_id    :   int :   ベストアンサーに選んだ回答ID    :  <FK>
      created_at :   date    :   投稿日時    :   <N>
  }
 
