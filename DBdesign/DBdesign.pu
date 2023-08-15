@@ -49,7 +49,7 @@
      --
      * reporter_user_id  : int   : 通報したユーザID    :   <FK>
      * reported_user_id  : int   : 通報されたユーザID    :   <FK>
-     * content    :   text :   通報理由    :   <N>
+     * reason    :   text :   通報理由    :   <N>
      created_at :   date    :   通報日時    :   <N>
  }
 
