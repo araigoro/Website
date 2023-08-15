@@ -9,6 +9,9 @@
 '     <U> ユニークキー（一意）
 '     カラム名 : 型 : 説明 :制約を書く
 
+'表記方法
+'コード上で Alt＋D
+
 @startuml test
  hide circle
  skinparam linetype ortho
