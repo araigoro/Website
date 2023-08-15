@@ -31,7 +31,7 @@
      * user_id  : int   : ユーザーID(質問者)    :   <FK>
      * title    :   varchar(30) :   題名    :   <N><U>
      * content    :   text :   質問内容    :   <N>
-     * best_answer_id    :   int :   ベストアンサーに選んだ回答ID    :  <FK>
+     * is_solved  : boolean : 解決したかどうか  :
      created_at :   date    :   投稿日時    :   <N>
  }
 
@@ -44,7 +44,21 @@
      created_at :   date    :   回答日時    :   <N>
  }
 
-   entity "report" as report {
+     entity "best_answer" as best_answer {
+     * id   :   int :   ベストアンサーID  :   <PK><A>
+     --
+     * user_id  : int   : 質問ID    :   <FK>
+     * question_id  : int   : 回答ID    :   <FK>
+ }
+
+    entity "favorite" as favorite {
+     * id   :   int :   お気に入りID  :   <PK><A>
+     --
+     * user_id  : int   : お気に入りしたユーザID    :   <FK>
+     * question_id  : int   : お気に入りした質問ID    :   <FK>
+ }
+
+    entity "report" as report {
      * id   :   int :   通報ID  :   <PK><A>
      --
      * reporter_user_id  : int   : 通報したユーザID    :   <FK>
@@ -62,6 +76,10 @@
  user ||..o{ question
  user ||..o{ answer
  question ||..o{ answer
+ question ||..o{ best_answer
+ answer ||..o{ best_answer
+ user ||..o{ favorite
+ question ||..o{ favorite
  user ||..o{ report
 
  @enduml
