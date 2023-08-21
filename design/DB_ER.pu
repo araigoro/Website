@@ -22,7 +22,6 @@
      * name :   varchar(30) :   ユーザ名    :   <N><U>
     <C 空白を含まない>
      * password :   varchar(30) :   パスワード  :   <N><C 空白を含まない>
-     is_vicious :   boolean :   悪質なユーザかどうか    : 
  }
 
   entity "question" as question {
@@ -66,6 +65,11 @@
      * reason    :   text :   通報理由    :   <N>
      created_at :   date    :   通報日時    :   <N>
  }
+     entity "blackList" as blackList {
+     * id   :   int :   ブラックリストID  :   <PK><A>
+     --
+     * user_id  : int   : ブラックリスト認定されたユーザID    :   <FK>
+ }
 
  '文法
  '|o：0か1
@@ -81,5 +85,6 @@
  user ||..o{ favorite
  question ||..o{ favorite
  user ||..o{ report
+ user ||..o{ blackList
 
  @enduml
