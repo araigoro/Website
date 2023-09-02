@@ -6,9 +6,10 @@
 	margin: 0;
 }
 
-/*全ページ設定*/
-html {
-/*	font-size: 28px;*/
+/*pxをremの比率で指定できるよう、デフォルト(16px)から10pxになるように設定*/
+/*14pxにしたいときは1.4remで指定*/
+html{
+	font-size: 62.5%;
 }
 
 p,
@@ -32,22 +33,71 @@ main h2 {
 /*	text-decoration: underline;*/
 /*}*/
 
-.logo {
+/*フォントサイズは開くブラウザの設定の何%にするかで設定*/
+
+img {
+	/*	すべての画像はボックスサイズに合わせてサイズを調整*/
+	max-width: 100%;
+}
+
+
+/*TODO:各間隔(paddingとか)を調整するときどの値でやってたか忘れるから対策*/
+header {
 	text-align: center;
-	background-color: aqua;
-/*	padding-top: 75px;*/
-	padding-bottom: 75px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid black;
+	font-size: 2rem;
 }
 
-.logo img {
+.topLogo {
+	padding-bottom: 20px;
+}
+
+
+.topLogo img#icon {
+	/*	原寸だとでかすぎる*/
 	width: 80px;
-/*	background-color: darkgreen;*/
 }
 
-#title {
-	font-size: 50px;
+.topLogo p#siteTitle {
+	font-size: 5rem;
+
+	/*	文字を囲む*/
 	display: inline-block;
+
+	/*	囲む線の設定*/
 	border: 3px solid;
 	padding: 1%;
-/*	background-color: lemonchiffon;*/
+}
+
+.topLogo p#siteSubTitle {
+	font-size: 2.5rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+
+	/*	リストの先頭マーク(・)を消す*/
+	list-style-type: none;
+
+	/*	liタグを横並びにする*/
+	display: flex;
+
+	/*	フレックスボックスの配置設定*/
+	justify-content: center;
+
+	/*	タグの間隔設定*/
+	gap: 60px;
+}
+
+main {
+	margin: 10px auto 10px auto;
+	max-width: 1000px;
+}
+
+footer {
+	text-align: center;
+	padding-top: 10px;
+	border-top: 2px solid black;
 }
