@@ -44,27 +44,30 @@ body {
 	/*	static配下からのパスを指定*/
 	background-image: url(/test/images/sample8.jpg);
 	background-repeat: no-repeat;
+
+	/*	ボックスに合わせて全体を塗りつぶす*/
 	background-size: cover;
 	background-position: center;
+
+	/*	画面の一番下まで伸ばす*/
+	min-height: 100vh;
 }
 
 
 /*TODO:各間隔(paddingとか)を調整するときどの値でやってたか忘れるから対策*/
 header {
 	text-align: center;
-	padding-bottom: 10px;
-	border-bottom: 2px solid black;
+	padding-bottom: 1rem;
+	border-bottom: 0.2rem solid black;
 	font-size: 2rem;
 }
 
 .topLogo {
-	padding-bottom: 20px;
+	padding-bottom: 1em;
 }
 
-
 .topLogo img#icon {
-	/*	原寸だとでかすぎる*/
-	width: 80px;
+	width: 4em;
 }
 
 .topLogo p#siteTitle {
@@ -74,8 +77,8 @@ header {
 	display: inline-block;
 
 	/*	囲む線の設定*/
-	border: 3px solid;
-	padding: 1%;
+	border: 0.2rem solid;
+	padding: 0.2em;
 }
 
 nav ul {
@@ -92,16 +95,29 @@ nav ul {
 	justify-content: center;
 
 	/*	タグの間隔設定*/
-	gap: 60px;
+	gap: 5rem;
 }
 
 main {
-	margin: 10px auto 10px auto;
-	max-width: 1000px;
+	margin: 1rem auto 1rem auto;
+	max-width: 100rem;
 }
 
 footer {
 	text-align: center;
-	padding-top: 10px;
-	border-top: 2px solid black;
+	padding-top: 1rem;
+	border-top: 0.2rem solid black;
+	font-size: 2rem;
+}
+
+/*モバイル対応*/
+@media screen and (max-width:767px) {
+
+	html {
+		font-size: 35%;
+	}
+
+	main {
+		padding: 0 4%;
+	}
 }
