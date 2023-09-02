@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+	<!--CSS読み込み-->
+	<link rel="stylesheet" th:href="@{/test/css/test.css}">
+
+	<!--JS読み込み-->
+	<!--	<script th:src="@{/test/script.js}" defer></script>-->
+
+	<title>テストページ</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<img th:src="@{/test/images/icon.png}" alt="">
+			<br>
+			<p id="title">おしえて！探偵さん</p>
+			<p>謎解きイベント専用Q&Aサイト</p>
+		</div>
+		<nav>
+			<li>ホーム</li>
+			<li>マイページ</li>
+		</nav>
+
+	</header>
+	<main>
+		<h1>見出し1</h1>
+		<p>テストページです</p>
+
+		<div>
+			<h2>見出し2</h2>
+			<ul>
+				<li>リスト1</li>
+				<li>リスト2</li>
+			</ul>
+			<table>
+				<tr>
+					<th>テーブル見出し</th>
+					<td>テーブル1</td>
+				</tr>
+			</table>
+		</div>
+
+	</main>
+	<footer>
+		<a href="https://www.meijimura.com/" target="_blank">お問い合わせはこちらから</a>
+	</footer>
+</body>
+
+</html>

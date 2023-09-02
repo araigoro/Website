@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*全称セクタ*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/*全ページ設定*/
+html {
+/*	font-size: 28px;*/
+}
+
+p,
+li,
+td {
+	line-height: 1.7;
+}
+
+main h2 {
+	color: darkred;
+	font-size: 1.3rem;
+}
+
+/*a:link {*/
+/*	color: darkblue;*/
+/*	text-decoration: underline;*/
+/*}*/
+
+/*a:visited {*/
+/*	color: purple;*/
+/*	text-decoration: underline;*/
+/*}*/
+
+.logo {
+	text-align: center;
+	background-color: aqua;
+/*	padding-top: 75px;*/
+	padding-bottom: 75px;
+}
+
+.logo img {
+	width: 80px;
+/*	background-color: darkgreen;*/
+}
+
+#title {
+	font-size: 50px;
+	display: inline-block;
+	border: 3px solid;
+	padding: 1%;
+/*	background-color: lemonchiffon;*/
+}
