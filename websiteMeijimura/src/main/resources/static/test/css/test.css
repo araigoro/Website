@@ -8,7 +8,7 @@
 
 /*pxをremの比率で指定できるよう、デフォルト(16px)から10pxになるように設定*/
 /*14pxにしたいときは1.4remで指定*/
-html{
+html {
 	font-size: 62.5%;
 }
 
@@ -40,6 +40,14 @@ img {
 	max-width: 100%;
 }
 
+body {
+	/*	static配下からのパスを指定*/
+	background-image: url(/test/images/sample8.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
 
 /*TODO:各間隔(paddingとか)を調整するときどの値でやってたか忘れるから対策*/
 header {
@@ -68,10 +76,6 @@ header {
 	/*	囲む線の設定*/
 	border: 3px solid;
 	padding: 1%;
-}
-
-.topLogo p#siteSubTitle {
-	font-size: 2.5rem;
 }
 
 nav ul {
