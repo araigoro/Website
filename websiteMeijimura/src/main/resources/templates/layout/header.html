@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+
+<head>
+</head>
+
+<body>
+	<header layout:fragment="header">
+		<div class="topLogo">
+			<img id="icon" th:src="@{/image/icon.png}" alt="">
+			<br>
+			<p id="siteTitle">おしえて！探偵さん</p>
+			<p id="siteSubTitle">謎解きイベント・ゲーム等専用Q&Aサイト</p>
+		</div>
+		<nav>
+			<ul>
+				<li>ホーム</li>
+				<li>マイページ</li>
+				<li>ログイン</li>
+				<li>ユーザ登録</li>
+			</ul>
+		</nav>
+
+	</header>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*全体反映*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/*pxをremの比率で指定できるよう、デフォルト(16px)から10pxになるように設定*/
+/*14pxにしたいときは1.4remで指定*/
+html {
+	font-size: 62.5%;
+}
+
+img {
+	/*	すべての画像はボックスサイズに合わせてサイズを調整*/
+	max-width: 100%;
+}
+
+body {
+	/*	static配下からのパスを指定*/
+	background-image: url(/image/background.jpg);
+	background-repeat: no-repeat;
+
+	/*	ボックスに合わせて全体を塗りつぶす*/
+	background-size: cover;
+	background-position: center;
+
+	/*	画面の一番下まで伸ばす*/
+	min-height: 100vh;
+}
+
+
+/*TODO:各間隔(paddingとか)を調整するときどの値でやってたか忘れるから対策*/
+header {
+	text-align: center;
+	padding-bottom: 1rem;
+	border-bottom: 0.2rem solid black;
+	font-size: 2rem;
+}
+
+.topLogo {
+	padding-bottom: 0.1em;
+}
+
+.topLogo img#icon {
+	width: 4em;
+}
+
+.topLogo p#siteTitle {
+	font-size: 5rem;
+
+	/*	文字を囲む*/
+	display: inline-block;
+
+	/*	囲む線の設定*/
+	border: 0.2rem solid;
+	padding: 0.2em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+
+	/*	リストの先頭マーク(・)を消す*/
+	list-style-type: none;
+
+	/*	liタグを横並びにする*/
+	display: flex;
+
+	/*	フレックスボックスの配置設定*/
+	justify-content: center;
+
+	/*	タグの間隔設定*/
+	gap: 5rem;
+}
+
+main {
+	margin: 1rem auto 1rem auto;
+	max-width: 100rem;
+}
+
+footer {
+	text-align: center;
+	padding-top: 1rem;
+	border-top: 0.2rem solid black;
+	font-size: 2rem;
+}
+
+/*モバイル対応*/
+@media screen and (max-width:767px) {
+
+	html {
+		font-size: 35%;
+	}
+
+	main {
+		padding: 0 4%;
+	}
+}

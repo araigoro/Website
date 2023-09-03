@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+	<!--	CSS読込-->
+	<link rel="stylesheet" th:href="@{/test/css/test.css}">
+
+
+
+</head>
+
+
+<body>
+	<nav layout:replace="~{test/test::header}"></nav>
+
+	<nav layout:fragment="main"></nav>
+
+	<nav layout:replace="~{test/test::footer}"></nav>
+
+
+</body>
+
+</html>
