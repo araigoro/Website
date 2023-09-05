@@ -4,51 +4,33 @@
 
 <head>
 	<!--webjarsのライブラリ読込(Maven依存関係フォルダ内)-->
-	<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
-	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+<!--	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>-->
+<!--	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>-->
+
+	<link rel="stylesheet" th:href="@{/css/loginForm.css}">
 
 	<!--表示メッセージはmessages.propertiesで管理-->
 	<title th:text="#{loginForm}"></title>
 </head>
 
-<body class="bg-light">
+<body>
 	<div layout:fragment="main">
-		<div class="text-center">
-
-			<!--URLはjavaファイルで定義してるのでそれを使用-->
-			<form method="post" th:action="${Url.LOGIN}" class="form-login">
-				<h2 th:text="#{login}"></h2>
-
-				<!--TODO:ログインエラーメッセージのハードコーディング解消-->
-				<p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
-					th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}" class="text-danger">ログインエラーメッセージ</p>
-
-				<!--ユーザID入力欄-->
-				<div class="form-group">
-					<!--label:フォームの中で項目名と部品を紐づける-->
-					<label for="userId" class="sr-only"></label>
-					<!--placeholder:入力欄に初期値として表示される-->
-					<input type="text" class="form-control" th:placeholder="#{userId}" name="userId" />
-				</div>
-
-				<!--パスワード入力欄-->
-				<div class="form-group">
-					<label for="password" class="sr-only"></label>
-
-					<!--TODO:typeをpasswordに変更しておく-->
-					<input type="text" class="form-control" th:placeholder="#{password}" name="password" />
-				</div>
-
-				<br>
-
-				<!--ログインボタン-->
-				<input type="submit" th:value="#{login}" class="btn btn-primary" />
-			</form>
-
-			<!--ユーザ登録リンク表示-->
-			<a th:href="${Url.SIGNUP}" th:text="#{msgGuideUserRegistration}"></a>
-
+		<div class="login-page">
+			<div class="form">
+<!--				<form class="register-form">-->
+<!--					<input type="text" placeholder="name" />-->
+<!--					<input type="password" placeholder="password" />-->
+<!--					<input type="text" placeholder="email address" />-->
+<!--					<button>create</button>-->
+<!--					<p class="message">Already registered? <a href="#">Sign In</a></p>-->
+<!--				</form>-->
+				<form class="login-form">
+					<input type="text" th:placeholder="#{userId}" />
+					<input type="password" th:placeholder="#{password}" />
+					<button th:text="#{login}"></button>
+					<p class="message"><a th:href="${Url.LOGIN}" th:text="#{msgGuideUserRegistration}"></a>
+				</form>
+			</div>
 		</div>
 	</div>
 </body>
