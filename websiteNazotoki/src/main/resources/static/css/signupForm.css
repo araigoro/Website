@@ -34,7 +34,7 @@
 .form button {
 	text-transform: uppercase;
 	outline: 0;
-	background: rgba(0, 0, 205, 0.9);
+	background: rgba(0, 128, 0, 1);
 	width: 100%;
 	border: 0;
 	padding: 2rem;
@@ -48,7 +48,7 @@
 .form button:hover,
 .form button:active,
 .form button:focus {
-	background: rgba(0, 0, 205, 0.8);;
+	background: rgba(0, 128, 0, 0.9);
 }
 
 .form .message {
@@ -59,7 +59,7 @@
 }
 
 .form .message a {
-	color: rgba(0, 128, 0, 1);
+	color: rgba(0, 0, 205, 0.9);
 	text-decoration: underline;
 }
 

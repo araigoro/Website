@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/signupForm.css}">
+
+	<!--表示メッセージはmessages.propertiesで管理-->
+	<title th:text="#{signup}"></title>
+</head>
+
+<body>
+	<div layout:fragment="main">
+		<div class="login-page">
+			<div class="form">
+				<form class="register-form">
+					<input type="text" th:placeholder="#{newUserId}" />
+					<input type="password" th:placeholder="#{newPassword}" />
+					<button th:text="#{signup}"></button>
+					<p class="message"><a th:href="${Url.LOGIN}" th:text="#{msgGuideLogin}"></a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

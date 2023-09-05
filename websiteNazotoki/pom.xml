@@ -48,33 +48,46 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--		webjars:JSやCSSなどのライブラリをMavenで利用するライブラリ-->
-		<!--		jQuery:bootstrapを使うためのJSのライブラリ-->
+		<!--webjars:JSやCSSなどのライブラリをMavenで利用するライブラリ-->
+		<!--jQuery:bootstrapを使うためのJSのライブラリ-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>3.7.1</version>
 		</dependency>
 
-		<!--		bootstrap:画面デザインに使うCSSのフレームワーク-->
+		<!--bootstrap:画面デザインに使うCSSのフレームワーク-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>5.3.1</version>
 		</dependency>
 
-		<!--		webjars-locator:webjarで使用するライブラリのバージョンを意識せずにコードを書けるもの-->
+		<!--webjars-locator:webjarで使用するライブラリのバージョンを意識せずにコードを書けるもの-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
 			<version>0.47</version>
 		</dependency>
 
-		<!--		Thymeleafでレイアウトを作るためのライブラリ-->
+		<!--Thymeleafでレイアウトを作るためのライブラリ-->
 		<dependency>
 			<groupId>nz.net.ultraq.thymeleaf</groupId>
 			<artifactId>thymeleaf-layout-dialect</artifactId>
 		</dependency>
+
+		<!--AOPの利用-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+
+		<!--Aspectの利用-->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

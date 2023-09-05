@@ -3,32 +3,21 @@
 	layout:decorate="~{layout/layout}">
 
 <head>
-	<!--webjarsのライブラリ読込(Maven依存関係フォルダ内)-->
-<!--	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>-->
-<!--	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>-->
-
 	<link rel="stylesheet" th:href="@{/css/loginForm.css}">
 
 	<!--表示メッセージはmessages.propertiesで管理-->
-	<title th:text="#{loginForm}"></title>
+	<title th:text="#{login}"></title>
 </head>
 
 <body>
 	<div layout:fragment="main">
 		<div class="login-page">
 			<div class="form">
-<!--				<form class="register-form">-->
-<!--					<input type="text" placeholder="name" />-->
-<!--					<input type="password" placeholder="password" />-->
-<!--					<input type="text" placeholder="email address" />-->
-<!--					<button>create</button>-->
-<!--					<p class="message">Already registered? <a href="#">Sign In</a></p>-->
-<!--				</form>-->
 				<form class="login-form">
 					<input type="text" th:placeholder="#{userId}" />
 					<input type="password" th:placeholder="#{password}" />
 					<button th:text="#{login}"></button>
-					<p class="message"><a th:href="${Url.LOGIN}" th:text="#{msgGuideUserRegistration}"></a>
+					<p class="message"><a th:href="${Url.SIGNUP}" th:text="#{msgGuideSignUp}"></a>
 				</form>
 			</div>
 		</div>

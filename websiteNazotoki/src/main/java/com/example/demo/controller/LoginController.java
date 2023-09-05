@@ -15,6 +15,8 @@ public class LoginController {
 		//		html内でUrlクラスの情報を利用する
 		//		Url.〇〇で定数やメソッドへのアクセスが可能
 		model.addAttribute(Url.class.getSimpleName(), Url.class);
+		
+		System.out.println(100);
 
 		return Url.LOGIN;
 	}
