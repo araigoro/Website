@@ -4,21 +4,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.constant.URL;
+import com.example.demo.constant.Url;
 
 @Controller
 public class SignupController {
 
-	@GetMapping(URL.SIGNUP)
+	@GetMapping(Url.SIGNUP)
 	public String showSignupForm() {
-		return URL.SIGNUP;
+		return Url.SIGNUP;
 	}
 
-	@PostMapping(URL.SIGNUP)
+	@PostMapping(Url.SIGNUP)
 	public String signup() {
-		
-		//同じリクエストが送られないようリダイレクト(PRGパターン)
-		return URL.REDIRECT + URL.LOGIN;
+
+		//同じリクエストが送られないようリダイレクトする(PRGパターンで検索)
+		return Url.redirect(Url.LOGIN);
 	}
 
 }

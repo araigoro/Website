@@ -39,15 +39,15 @@ header {
 	font-size: 2rem;
 }
 
-.topLogo {
+.top-logo {
 	padding-bottom: 0.1em;
 }
 
-.topLogo img#icon {
+.top-logo img#icon {
 	width: 4em;
 }
 
-.topLogo p#siteTitle {
+.top-logo p#site-title {
 	font-size: 5rem;
 
 	/*	文字を囲む*/

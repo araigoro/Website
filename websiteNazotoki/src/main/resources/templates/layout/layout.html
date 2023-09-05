@@ -4,18 +4,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	
+
 	<link rel="stylesheet" th:href="@{/css/layout.css}">
 </head>
 
 
 <body>
 
+	<!--共通ヘッダー-->
 	<div layout:replace="~{layout/header::header}"></div>
 
-	<!--	各htmlでここを書き換える-->
+	<!--各htmlでここを書き換える-->
 	<div layout:fragment="main"></div>
 
+	<!--共通フッター-->
 	<div layout:replace="~{layout/footer::footer}"></div>
 
 </body>

@@ -6,14 +6,16 @@
 </head>
 
 <body>
+	<!--すべてのwebページで共通のヘッダー-->
 	<header layout:fragment="header">
-		<div class="topLogo">
+		<div class="top-logo">
 			<img id="icon" th:src="@{/image/icon.png}" alt="">
 			<br>
-			<p id="siteTitle">おしえて！探偵さん</p>
-			<p id="siteSubTitle">謎解きイベント・ゲーム等専用Q&Aサイト</p>
+			<p id="site-title" th:text="#{siteTitle}"></p>
+			<p id="site-subtitle" th:text="#{siteSubTitle}"></p>
 		</div>
 		<nav>
+			<!--TODO:各リンクの設定とハードコーディングの解消-->
 			<ul>
 				<li>ホーム</li>
 				<li>マイページ</li>
