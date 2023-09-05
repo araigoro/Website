@@ -27,6 +27,8 @@ body {
 
 	/*画面の一番下まで伸ばす*/
 	min-height: 100vh;
+
+	font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -53,6 +55,12 @@ header nav ul {
 	/*タグの間隔設定*/
 	gap: 5rem;
 }
+
+header a {
+	color: black;
+	text-decoration: none;
+}
+
 
 /*ヘッダー上部のロゴ*/
 .top-logo {
