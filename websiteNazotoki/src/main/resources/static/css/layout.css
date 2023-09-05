@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/*フォント使用のため*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
 /*全体反映*/
@@ -30,6 +31,7 @@ body {
 	/*画面の一番下まで伸ばす*/
 	min-height: 100vh;
 
+	/*4行目でimportして使ってるフォント*/
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -98,6 +100,10 @@ footer {
 	padding-top: 1rem;
 	border-top: 0.2rem solid black;
 	font-size: 2rem;
+}
+
+footer a{
+	color: black;
 }
 
 /*モバイル対応*/
