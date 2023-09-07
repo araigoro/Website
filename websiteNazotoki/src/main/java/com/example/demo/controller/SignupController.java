@@ -2,12 +2,15 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.constant.Url;
 import com.example.demo.form.SignupForm;
+import com.example.demo.form.Validation.ValidOrder;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -26,9 +29,17 @@ public class SignupController {
 	}
 
 	@PostMapping(Url.SIGNUP)
-	public String signup(Model model, @ModelAttribute SignupForm signupForm) {
+	public String signup(Model model, @ModelAttribute @Validated(ValidOrder.class) SignupForm signupForm,
+			BindingResult bindingResult) {
 
 		model.addAttribute(Url.class.getSimpleName(), Url.class);
+
+		//登録内容が以下の場合は無効
+		//ユーザID：空白を含む
+		//パスワード：4文字以下
+		if (bindingResult.hasErrors()) {
+			return showSignupForm(model, signupForm);
+		}
 
 		log.info(signupForm.toString());
 
