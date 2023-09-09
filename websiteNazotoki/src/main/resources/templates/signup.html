@@ -14,8 +14,8 @@
 		<div class="login-page">
 			<div class="form">
 				<form class="signup-form" method="post" th:action="${Url.SIGNUP}" th:object="${signupForm}">
-					<input type="text" th:placeholder="#{newUserId}" th:field="*{userId}" th:errorclass="is-invalid" />
-					<div class="invalid-feedback" th:errors="*{userId}"></div>
+					<input type="text" th:placeholder="#{newUserName}" th:field="*{userName}" th:errorclass="is-invalid" />
+					<div class="invalid-feedback" th:errors="*{userName}"></div>
 					<input type="password" th:placeholder="#{newPassword}" th:field="*{password}"
 						th:errorclass="is-invalid" />
 					<div class="invalid-feedback" th:errors="*{password}"></div>
