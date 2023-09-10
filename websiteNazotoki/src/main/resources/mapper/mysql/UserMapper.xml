@@ -14,10 +14,10 @@
 
 		)values(
 
-		#{userName}
+		#{userName},
 		#{password}
 
-		)
+		);
 
 	</insert>
 
